@@ -1,0 +1,579 @@
+
+ 🧮 If...Else Statements in C
+ 
+- Used to make decisions in programs.
+- if checks a condition — if it’s true, a block of code runs.
+- If the condition is false, else gives an alternate path.
+- You can use else if to check more than one condition.
+- It’s how you teach your program to "think" or make choices based on user input. 
+
+
+CODES:-
+
+1. write a code for Enter value and check it is less, equal or greater (using if... else Statemenets)
+
+ #include <stdio.h>
+
+int main() {
+    int a, b;
+
+    printf("Enter two numbers: ");
+    scanf("%d %d", &a, &b);
+
+    if(a > b)
+        printf("First number is greater\n");
+    else if(a < b)
+        printf("First number is less\n");
+    else
+        printf("Both numbers are equal\n");
+
+    return 0;
+}
+
+📝 Short Description:
+This program takes two numbers as input from the user and compares them using if...else conditions:
+- If the first is bigger, it prints "greater".
+- If it's smaller, it prints "less".
+- If they're the same, it prints "equal".
+
+
+ 2. write a code for nput 2 number and print the maximum among them.
+
+ #include <stdio.h>
+
+int main() {
+    int a, b;
+
+    printf("Enter two numbers: ");
+    scanf("%d %d", &a, &b);
+
+    if(a > b)
+        printf("Maximum = %d\n", a);
+    else
+        printf("Maximum = %d\n", b);
+
+    return 0;
+}
+
+📝 Short Description:
+This basic program asks the user to enter two numbers.
+It then compares them using an if...else statement and prints the larger number as the maximum.
+
+
+3.  write a code for Input 2 number and print the maximum among them ( using conditional operator)
+
+ #include <stdio.h>
+
+int main() {
+    int a, b;
+
+    printf("Enter two numbers: ");
+    scanf("%d %d", &a, &b);
+
+    int max = (a > b) ? a : b;
+
+    printf("Maximum = %d\n", max);
+    return 0;
+}
+
+ 📝 Short Description:
+This program takes two numbers as input and uses the ternary operator
+(condition) ? value_if_true : value_if_false to check which one is greater. The result is stored in max and printed.
+
+
+4. write a code for Input 3 number and print the maximum among them .
+
+  #include <stdio.h>
+
+int main() {
+    int a, b, c, max;
+
+    printf("Enter three numbers: ");
+    scanf("%d %d %d", &a, &b, &c);
+
+    if(a > b && a > c)
+        max = a;
+    else if(b > c)
+        max = b;
+    else
+        max = c;
+
+    printf("Maximum = %d\n", max);
+    return 0;
+}
+
+📝 Short Description:
+This program reads three numbers from the user and compares them using if...else conditions
+to find the largest value among them. It’s a basic way to learn decision-making and comparisons in C.
+
+
+5. write a code for Input 3 number and print the maximum among them. (with conditional operator)
+
+
+ #include <stdio.h>
+
+int main() {
+    int a, b, c, max;
+
+    printf("Enter three numbers: ");
+    scanf("%d %d %d", &a, &b, &c);
+
+    max = (a > b) ? ((a > c) ? a : c) : ((b > c) ? b : c);
+
+    printf("Maximum = %d\n", max);
+    return 0;
+}
+
+
+ 📝 Short Description:
+This program takes three integers as input and uses nested conditional (ternary) operators 
+to find the largest among them. It’s a compact way to write decision-making logic without using if...else.
+
+
+  6. Write a program that find minimum and maximum out of 3 values.
+
+  #include <stdio.h>
+
+int main() {
+    int a, b, c, max, min;
+
+    scanf("%d %d %d", &a, &b, &c);
+
+    // Max check
+    if(a > b && a > c)
+        max = a;
+    else if(b > c)
+        max = b;
+    else
+        max = c;
+
+    // Min check
+    if(a < b && a < c)
+        min = a;
+    else if(b < c)
+        min = b;
+    else
+        min = c;
+
+    printf("Max = %d\n", max);
+    printf("Min = %d\n", min);
+
+    return 0;
+}
+ 📝 Short Description:
+This code reads 3 numbers and checks which one is the biggest (max) and smallest (min) using simple conditions.
+No shortcuts, no tricks — just basic comparisons.
+
+
+7. Write a program that interchange or swap the values of 2 variables
+
+ #include <stdio.h>
+
+int main() {
+    int a, b, temp;
+
+    printf("Enter two numbers: ");
+    scanf("%d %d", &a, &b);
+
+    // Swapping
+    temp = a;
+    a = b;
+    b = temp;
+    printf("After swapping: a = %d, b = %d\n", a, b);
+    return 0;
+}
+
+
+📝 Short Description:
+This program takes two integers from the user and swaps them using a third variable temp.
+It's a classic logic-building exercise that teaches how data can be transferred and reassigned between variables.
+
+
+8. Write a program to interchange the value of 2 variable without using 3rd variable.
+
+#include <stdio.h>
+
+int main() {
+    int a, b;
+
+    printf("Enter two numbers: ");
+    scanf("%d %d", &a, &b);
+
+    a = a + b;
+    b = a - b;
+    a = a - b;
+
+    printf("After swapping: a = %d, b = %d\n", a, b);
+    return 0;
+}
+
+📝 Short Description:
+This program swaps two numbers using arithmetic operations. It adds both numbers into a,
+then subtracts the original b to get the original a in b, and finally subtracts the new b to get the original b in a. No extra variable needed!
+
+
+
+9. Write a program to check whether the entered no is odd or even.
+
+#include <stdio.h>
+
+int main() {
+    int num;
+
+    printf("Enter a number: ");
+    scanf("%d", &num);
+
+    if(num % 2 == 0)
+        printf("Even\n");
+    else
+        printf("Odd\n");
+
+    return 0;
+}
+
+📝 Short Description:
+This program uses the modulus operator % to find the remainder when the number is divided by 2.
+If the remainder is 0, it’s an even number; otherwise, it’s odd.
+
+
+
+10. Get a character in lower case form user and display it in upper case.
+
+ #include <stdio.h>
+
+int main() {
+    char lower, upper;
+
+    printf("Enter a lowercase character: ");
+    scanf(" %c", &lower);  // space before %c helps skip any leftover newline
+
+    upper = lower - 32;
+
+    printf("Uppercase = %c\n", upper);
+    return 0;
+}
+
+
+ 📝 Short Description:
+This program takes a lowercase letter as input and converts it to uppercase by subtracting 32 from
+its ASCII value (works only for English alphabets). It then prints the uppercase character.
+
+
+11. Get a character from user and print tell that is it vowel or consonant.
+
+#include <stdio.h>
+
+int main() {
+    char ch;
+
+    printf("Enter a character: ");
+    scanf(" %c", &ch);  // leading space helps skip leftover newline
+
+    // Check for vowels (both uppercase and lowercase)
+    if(ch=='a' || ch=='e' || ch=='i' || ch=='o' || ch=='u' ||
+       ch=='A' || ch=='E' || ch=='I' || ch=='O' || ch=='U')
+        printf("Vowel\n");
+    else
+        printf("Consonant\n");
+
+    return 0;
+}
+
+📝 Short Description:
+This program takes a single character input and uses logical conditions (||) to check if it matches any of the vowels.
+If it does, it prints “Vowel”; otherwise, it prints “Consonant.” It also works for both lowercase and uppercase letters.
+
+ 
+12. Print & calculate area of circle, area of triangle & (f+g)*(f+g) & simple interest & exit in one program.
+
+
+#include <stdio.h>
+#include <stdlib.h>  // For exit()
+
+int main() {
+    int choice;
+    float radius, base, height, f, g, principal, rate, time;
+
+    while(1) {
+        printf("\n--- Menu ---\n");
+        printf("1. Area of Circle\n");
+        printf("2. Area of Triangle\n");
+        printf("3. (f + g) * (f + g)\n");
+        printf("4. Simple Interest\n");
+        printf("5. Exit\n");
+        printf("Enter your choice: ");
+        scanf("%d", &choice);
+
+        switch(choice) {
+            case 1:
+                printf("Enter radius: ");
+                scanf("%f", &radius);
+                printf("Area of Circle = %.2f\n", 3.14 * radius * radius);
+                break;
+
+            case 2:
+                printf("Enter base and height: ");
+                scanf("%f %f", &base, &height);
+                printf("Area of Triangle = %.2f\n", (base * height) / 2);
+                break;
+
+            case 3:
+                printf("Enter f and g: ");
+                scanf("%f %f", &f, &g);
+                printf("(f + g) * (f + g) = %.2f\n", (f + g) * (f + g));
+                break;
+
+            case 4:
+                printf("Enter Principal, Rate, and Time: ");
+                scanf("%f %f %f", &principal, &rate, &time);
+                printf("Simple Interest = %.2f\n", (principal * rate * time) / 100);
+                break;
+
+            case 5:
+                printf("Exiting... Goodbye!\n");
+                exit(0);
+
+            default:
+                printf("Invalid choice. Try again.\n");
+        }
+    }
+
+    return 0;
+}
+
+
+📝 Short Description:
+This program uses a loop and a switch statement to provide a menu with multiple calculation options. 
+The user chooses an option, provides the needed inputs, and the program performs the calculation. It keeps running until option 5 is selected to exit.
+
+
+13. Print & calculate addition, substrection, multiplication & division of two value in one progarm
+
+  #include <stdio.h>
+
+int main() {
+    float a, b;
+
+    printf("Enter two numbers: ");
+    scanf("%f %f", &a, &b);
+
+    printf("Addition = %.2f\n", a + b);
+    printf("Subtraction = %.2f\n", a - b);
+    printf("Multiplication = %.2f\n", a * b);
+    
+    if(b != 0)
+        printf("Division = %.2f\n", a / b);
+    else
+        printf("Division = Not possible (division by zero)\n");
+
+    return 0;
+}
+
+
+ 📝 Short Description:
+This program reads two numbers from the user and performs four arithmetic operations.
+It also includes a simple safety check to avoid dividing by zero—nice and clean for practicing both input and logic skills.
+
+ 
+14. Write a program that take input of 5 subjects marks. Count the percentage. Print the result
+for following condition
+--If student has 70% or more then 70% then DISTINCTION.
+--If student has percentage between 60 and 69 then FIRST CLASS.
+--student has percentage between 50 and 59 then SECOND CLASS
+--If student has percentage between 40 and 49 then PASS CLASS.
+--student has percentage less then 40 then FAIL.
+
+
+#include <stdio.h>
+
+int main() {
+    float m1, m2, m3, m4, m5, total, percent;
+
+    printf("Enter marks for 5 subjects: ");
+    scanf("%f %f %f %f %f", &m1, &m2, &m3, &m4, &m5);
+
+    total = m1 + m2 + m3 + m4 + m5;
+    percent = total / 5;
+
+    printf("Percentage = %.2f%%\n", percent);
+
+    if(percent >= 70)
+        printf("Result: DISTINCTION\n");
+    else if(percent >= 60)
+        printf("Result: FIRST CLASS\n");
+    else if(percent >= 50)
+        printf("Result: SECOND CLASS\n");
+    else if(percent >= 40)
+        printf("Result: PASS CLASS\n");
+    else
+        printf("Result: FAIL\n");
+
+    return 0;
+}
+
+📝 Short Description:
+This program collects marks for five subjects, calculates the average percentage, 
+and then uses if...else statements to categorize the student's result into Distinction, 
+First Class, Second Class, Pass Class, or Fail based on the rules you gave.
+
+
+15. Write a program that take input of 5 subjects marks. If student get 40 or more then 40 then
+he is PASS in that subject otherwise FAIL print the result for following condition.
+If student is pass in all subjects then declare PASS
+Is student is fail in 1 or 2 subject then declare ATKT.
+If student is fail in more then 2 subject then declare FAIL.
+
+#include <stdio.h>
+
+int main() {
+    float m1, m2, m3, m4, m5;
+    int passCount = 0, failCount = 0;
+
+    printf("Enter marks for 5 subjects: ");
+    scanf("%f %f %f %f %f", &m1, &m2, &m3, &m4, &m5);
+
+    // Check each subject
+    if(m1 >= 40) {
+        printf("Subject 1: PASS\n");
+        passCount++;
+    } else {
+        printf("Subject 1: FAIL\n");
+        failCount++;
+    }
+
+    if(m2 >= 40) {
+        printf("Subject 2: PASS\n");
+        passCount++;
+    } else {
+        printf("Subject 2: FAIL\n");
+        failCount++;
+    }
+
+    if(m3 >= 40) {
+        printf("Subject 3: PASS\n");
+        passCount++;
+    } else {
+        printf("Subject 3: FAIL\n");
+        failCount++;
+    }
+
+    if(m4 >= 40) {
+        printf("Subject 4: PASS\n");
+        passCount++;
+    } else {
+        printf("Subject 4: FAIL\n");
+        failCount++;
+    }
+
+    if(m5 >= 40) {
+        printf("Subject 5: PASS\n");
+        passCount++;
+    } else {
+        printf("Subject 5: FAIL\n");
+        failCount++;
+    }
+
+    // Final Result
+    if(passCount == 5)
+        printf("\nFinal Result: PASS\n");
+    else if(failCount <= 2)
+        printf("\nFinal Result: ATKT\n");
+    else
+        printf("\nFinal Result: FAIL\n");
+
+    return 0;
+}
+
+ 📝 Short Description:
+This program takes marks for five subjects and checks each one individually. It tracks how many are PASS or FAIL and then prints the final result:
+- PASS = all subjects passed
+- ATKT = failed in 1 or 2 subjects
+- FAIL = failed in more than 2 subjects
+
+
+15. Write a program that count the area for circle, square, rectangle and triangle using Switch-Case control structure
+
+   #include <stdio.h>
+#include <stdlib.h>  // For exit()
+
+int main() {
+    int choice;
+    float radius, side, length, width, base, height, area;
+
+    printf("--- Area Calculator ---\n");
+    printf("1. Circle\n");
+    printf("2. Square\n");
+    printf("3. Rectangle\n");
+    printf("4. Triangle\n");
+    printf("Enter your choice (1-4): ");
+    scanf("%d", &choice);
+
+    switch(choice) {
+        case 1:
+            printf("Enter radius: ");
+            scanf("%f", &radius);
+            area = 3.14 * radius * radius;
+            printf("Area of Circle = %.2f\n", area);
+            break;
+
+        case 2:
+            printf("Enter side length: ");
+            scanf("%f", &side);
+            area = side * side;
+            printf("Area of Square = %.2f\n", area);
+            break;
+
+        case 3:
+            printf("Enter length and width: ");
+            scanf("%f %f", &length, &width);
+            area = length * width;
+            printf("Area of Rectangle = %.2f\n", area);
+            break;
+
+        case 4:
+            printf("Enter base and height: ");
+            scanf("%f %f", &base, &height);
+            area = (base * height) / 2;
+            printf("Area of Triangle = %.2f\n", area);
+            break;
+
+        default:
+            printf("Invalid choice. Please select between 1 to 4.\n");
+    }
+
+    return 0;
+}
+
+📝 Short Description:
+This program uses a switch statement to choose between four geometric shapes. 
+Based on the user's selection, it asks for the relevant inputs and calculates the area.
+It's a great example of using decision-making with switch-case and handling multiple formulas in one program.
+
+ 
+16. Write a program that take input of year in 4 digit. Determine whether the year is leap year or not. (try to solve this problem with && and or operator
+
+ 
+#include <stdio.h>
+
+int main() {
+    int year;
+
+    printf("Enter a 4-digit year: ");
+    scanf("%d", &year);
+
+    if((year % 4 == 0 && year % 100 != 0) || year % 400 == 0)
+        printf("%d is a Leap Year\n", year);
+    else
+        printf("%d is Not a Leap Year\n", year);
+
+    return 0;
+}
+
+
+ 📝 Short Description:
+This program checks the leap year rule using:
+- && to ensure the year is divisible by 4 but not by 100
+- || to allow years divisible by 400 to still be leap years
+It’s how we correctly apply the leap year rule used in calendars
+
+
