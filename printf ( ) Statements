@@ -1,10 +1,12 @@
 1. write a code for print your name and adress using C language. 
 
    #include <stdio.h>
-
-int main() {
-    printf("C Programming\n");
+    int main() {
+    printf(" My First C Programming\n");
     printf("My name is Mohit\n");
-    printf("Address: Ahmedabad, India\n");
+    printf("Address: Morbi, India\n");
     return 0;
 }
+
+📝 Explanation: These use printf() to display messages. Great starting point for understanding output in C.
+
