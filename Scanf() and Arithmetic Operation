@@ -1,4 +1,20 @@
 
+ 🧠 Topic: scanf() and Arithmetic Operations in C
+
+🔹 What is scanf()?
+- scanf() is a function used to take input from the user.
+- For example: scanf("%d", &x); means “store an integer typed by the user into variable x.”
+🔹 What are Arithmetic Operations?
+
+These are basic math calculations you can perform in C:
+- Addition: +
+- Subtraction: -
+- Multiplication: *
+- Division: /
+- Modulus (remainder): %
+
+
+
  1.  write a code for enrter value of an integer variable and print it on screen.
 
  #include <stdio.h>
