@@ -1,0 +1,311 @@
+
+ 1.  write a code for enrter value of an integer variable and print it on screen.
+
+ #include <stdio.h>
+
+int main() {
+    int number;
+    printf("Enter an integer: ");
+    scanf("%d", &number);
+    printf("You entered: %d\n", number);
+    return 0;
+}
+
+ Description:- 
+ This simple C program takes an integer input from the user using scanf() and displays it using printf(). 
+ It's a basic way to learn how user input and output works in C programming.
+
+
+2. write a code for Check if number is less, equal or greater then zero.
+
+#include <stdio.h>
+int main() {
+    int I;
+    printf("Enter value of I: ");
+    scanf("%d", &I);
+
+    if(I > 0)
+        printf("I is greater than zero.\n");
+    else if(I == 0)
+        printf("I is equal to zero.\n");
+    else
+        printf("I is less than zero.\n");
+
+    return 0;
+}
+
+Description:-
+This program reads an integer I from the user and checks if it's greater than,
+equal to, or less than zero using simple if-else logic.
+
+  
+3. write a code for print Squares and Cubes of Two Numbers.
+
+#include <stdio.h>
+
+int main() {
+    int x, y;
+    printf("Enter two numbers: ");
+    scanf("%d%d", &x, &y);
+
+    printf("Square: %d and %d\n", x*x, y*y);
+    printf("Cube: %d and %d\n", x*x*x, y*y*y);
+
+    return 0;
+}
+
+Description:-
+ This program asks the user to enter two numbers and then shows their square and cube.
+ It uses basic multiplication and scanf/printf for input and output.
+
+
+4. write a code for 
+
+#include <stdio.h>
+int main() {
+    int a, b;
+    printf("Enter 2 numbers: ");
+    scanf("%d %d", &a, &b);
+
+    printf("Add = %d\n", a + b);
+    printf("Sub = %d\n", a - b);
+    printf("Mul = %d\n", a * b);
+    printf("Div = %.2f\n", (float)a / b);  
+    return 0;
+}
+
+Description:-
+ This code takes two numbers and shows their addition, subtraction, multiplication,
+ and division. It doesn't check if b is zero—so division will run no matter what.
+
+5. write a code for Verify the formula l=(c+d)*(g+h).
+
+ #include <stdio.h>
+int main() {
+    int c, d, g, h, l;
+    printf("Enter values for c, d, g, h: ");
+    scanf("%d %d %d %d", &c, &d, &g, &h);
+
+    l = (c + d) * (g + h);
+    printf("l = %d\n", l);
+
+    return 0;
+}
+ 
+Description:-
+ This simple C program takes four integers c, d, g, and h then calculates
+l = (c + d) * (g + h) and prints the result. It's a clear way to test and 
+verify arithmetic expressions in code.
+
+6. wriet a code for Verify the formula x=((k-4)*(a*4))/100.
+
+#include <stdio.h>
+int main() {
+    int k, a, x;
+
+    printf("Enter values for k and a: ");
+    scanf("%d %d", &k, &a);
+
+    x = ((k - 4) * (a * 4)) / 100;
+
+    printf("x = %d\n", x);
+
+    return 0;
+}
+
+Description:-
+ This program takes values of k and a, plugs them into the formula x = ((k - 4) * (a * 4)) / 100,
+ and prints the result. It's great for learning how to apply math formulas in C code using variables and basic arithmetic.
+
+
+
+7. write a code for Verify the formula s=((4"a+c)-2*a*b)/100
+
+#include <stdio.h>
+int main() {
+    int a, b, c, s;
+
+    printf("Enter values for a, b, and c: ");
+    scanf("%d %d %d", &a, &b, &c);
+
+    s = ((4 * a + c) - 2 * a * b) / 100;
+    printf("s = %d\n", s);
+
+    return 0;
+}
+
+📝 Short Description:
+This program takes inputs a, b, and c, then calculates the result of the formula
+s = ((4*a + c) - 2*a*b) / 100. It’s useful for practicing how to write and evaluate custom formulas using variables.
+
+
+8. write a code for Verify the formula a=p*(1+(r/100)/n)-p
+
+ #include <stdio.h>
+int main() {
+    float p, r, n, a;
+
+    printf("Enter values for p, r, and n: ");
+    scanf("%f %f %f", &p, &r, &n);
+
+    a = p * (1 + (r / 100) / n) - p;
+    printf("a = %.2f\n", a);
+
+    return 0;
+}
+
+ 📝 Short Description:
+This program takes values for p, r, and n, applies the formula a = p * (1 + (r / 100) / n) - p, 
+and prints the result. It shows how to calculate the extra amount (like interest or gain) after applying a percentage and division.
+
+
+9. write a code for  Verify the formula t=((v+s)+(l-m)*l).
+
+#include <stdio.h>
+
+int main() {
+    int v, s, l, m, t;
+
+    printf("Enter values for v, s, l, and m: ");
+    scanf("%d %d %d %d", &v, &s, &l, &m);
+
+    t = ((v + s) + (l - m) * l);
+    printf("t = %d\n", t);
+
+    return 0;
+}
+
+📝 Short Description:
+This program takes four inputs (v, s, l, m) and calculates the value of t using the formula 
+t = ((v + s) + (l - m) * l). It shows how to combine addition, subtraction, and multiplication in one expression.
+
+
+10. write a code for Calculate the area of circle.
+
+ #include <stdio.h>
+
+int main() {
+    float radius, area;
+    printf("Enter radius: ");
+    scanf("%f", &radius);
+
+    area = 3.14 * radius * radius;
+    printf("Area = %.2f\n", area);
+    return 0;
+}
+
+ 📝 Short Description:
+This beginner-friendly program takes the radius as input and uses the formula
+area = π × r² (π is approximated as 3.14) to calculate and display the area of a circle.
+
+
+11. write a code for Calculate the area of Triangle.
+
+ #include <stdio.h>
+
+int main() {
+    float base, height, area;
+
+    printf("Enter base and height of triangle: ");
+    scanf("%f %f", &base, &height);
+
+    area = (base * height) / 2;
+    printf("Area = %.2f\n", area);
+
+    return 0;
+}
+
+ 📝 Short Description:
+This program asks the user for the base and height of a triangle, then uses the formula 
+(base × height) / 2 to calculate and display the area. It’s a great example of combining user input and simple math in C. 
+
+
+12. write a code for Verify the formula c=(a+b)*(a+b).
+
+  #include <stdio.h>
+
+int main() {
+    int a, b, c;
+
+    printf("Enter values of a and b: ");
+    scanf("%d %d", &a, &b);
+
+    c = (a + b) * (a + b);
+    printf("c = %d\n", c);
+
+    return 0;
+}
+
+📝 Short Description:
+This program takes two numbers as input and applies the formula c = (a + b)².
+It shows how to use brackets and multiplication in C to calculate the square of a sum.
+
+ 
+13. write a code for Write a program to count the simple interest.
+
+  #include <stdio.h>
+
+int main() {
+    float P, R, T, SI;
+
+    printf("Enter Principal, Rate and Time: ");
+    scanf("%f %f %f", &P, &R, &T);
+
+    SI = (P * R * T) / 100;
+    printf("Simple Interest = %.2f\n", SI);
+
+    return 0;
+}
+
+📝 Short Description:
+This beginner-friendly program takes the principal amount, rate of interest, and time as input.
+It then calculates the Simple Interest using the formula (P × R × T) / 100 and displays the result.
+
+  
+14. write a code for Input a Rupees and prints its value converted into Dollar.
+
+ #include <stdio.h>
+
+int main() {
+    float rupees, rate, dollars;
+
+    printf("Enter amount in Rupees: ");
+    scanf("%f", &rupees);
+
+    printf("Enter current exchange rate (1 USD = ? INR): ");
+    scanf("%f", &rate);
+
+    dollars = rupees / rate;
+    printf("Dollar = %.2f\n", dollars);
+
+    return 0;
+}
+
+📝 Short Description:
+This program lets the user enter both the rupee amount and exchange rate.
+It then calculates the dollar value using dollars = rupees / rate. Super useful when the exchange rate changes!
+
+
+15. write a code for Input a Number of Chairs and its Total Cost and Prints the Cost of Each chair.
+
+ #include <stdio.h>
+
+int main() {
+    int chairs;
+    float totalCost, costPerChair;
+
+    printf("Enter number of chairs: ");
+    scanf("%d", &chairs);
+
+    printf("Enter total cost: ");
+    scanf("%f", &totalCost);
+
+    costPerChair = totalCost / chairs;
+    printf("Cost per chair = %.2f\n", costPerChair);
+    return 0;
+}
+
+📝 Short Description:
+This program takes two inputs—number of chairs and total cost—and calculates the cost of each chair
+by dividing total cost by chair count. It uses basic division and displays the result with two decimal places.
+
