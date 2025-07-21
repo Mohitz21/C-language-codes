@@ -576,4 +576,188 @@ This program checks the leap year rule using:
 - || to allow years divisible by 400 to still be leap years
 It’s how we correctly apply the leap year rule used in calendars
 
+17.  Write a program that determine the grade of steel according to following condition. 
+1 Hardness must be greater then 50
+2 Carbon must be less then 0.7
+3 Tensile must t be be greater then 5500
+Take the input for above qualities through keyboard from user Grades are decided as follows.
+Grade A if all 3 conditions are met.
+Grade B if condition (1) and (2) are met.
+Grade C if condition (2) and (3) are met.
+Grade D if condition (1) and (3) are met.
+Grade E if only one condition met.
+Grade F if none of conditions are met.
 
+
+
+#include <stdio.h>
+
+int main() {
+    float carbon;
+    int hardness, tensile;
+    int cond1 = 0, cond2 = 0, cond3 = 0;
+
+    // Input values
+    printf("Enter hardness: ");
+    scanf("%d", &hardness);
+
+    printf("Enter carbon content (%%): ");
+    scanf("%f", &carbon);
+
+    printf("Enter tensile strength: ");
+    scanf("%d", &tensile);
+
+    // Condition checks
+    if (hardness > 50) cond1 = 1;
+    if (carbon < 0.7)  cond2 = 1;
+    if (tensile > 5500) cond3 = 1;
+
+    // Grade determination logic
+    if (cond1 && cond2 && cond3)
+        printf("Grade: A\n");
+    else if (cond1 && cond2)
+        printf("Grade: B\n");
+    else if (cond2 && cond3)
+        printf("Grade: C\n");
+    else if (cond1 && cond3)
+        printf("Grade: D\n");
+    else if (cond1 || cond2 || cond3)
+        printf("Grade: E\n");
+    else
+        printf("Grade: F\n");
+
+    return 0;
+}
+
+
+📘 What It Does
+- Takes user input for hardness, carbon %, and tensile strength.
+- Uses flags (cond1, cond2, cond3) to track which conditions are satisfied.
+- Based on combinations, it prints the appropriate grade — simple, readable, and easy to test!
+
+
+18. Write a program to find maximum from 3 values using conditional operator.
+
+
+  #include <stdio.h>
+
+int main() {
+    int a, b, c, max;
+
+    // Input
+    printf("Enter three integers: ");
+    scanf("%d %d %d", &a, &b, &c);
+
+    // Using nested conditional operators to find max
+    max = (a > b) ? ((a > c) ? a : c) : ((b > c) ? b : c);
+
+    // Output
+    printf("Maximum value: %d\n", max);
+
+    return 0;
+}
+
+
+ 📘 Short Description
+This program reads three integers from the user and applies nested ternary operators
+(?:) to determine the greatest number. It’s a concise alternative to if-else statements, ideal for quick decision-making logic.
+
+
+19. Write a program that generate same output as of program no (10) using break statement.
+
+
+ #include <stdio.h>
+
+int main() {
+    int a, b, c, max;
+
+    // Input
+    printf("Enter three integers: ");
+    scanf("%d %d %d", &a, &b, &c);
+
+    while (1) {
+        if (a >= b && a >= c) {
+            max = a;
+            break;
+        } else if (b >= a && b >= c) {
+            max = b;
+            break;
+        } else {
+            max = c;
+            break;
+        }
+    }
+
+    // Output
+    printf("Maximum value: %d\n", max);
+
+    return 0;
+}
+
+
+📘 Short Description
+This program uses a while (1) infinite loop along with break statements to exit as soon as 
+the maximum value among the three inputs is found. It mimics the decision-making process from program 
+10 but swaps out conditional operators for control-flow logic
+
+
+ 
+20. Write a program that performs the sum of given numbers until user says no using Go-To statement.
+
+
+ #include <stdio.h>
+
+int main() {
+    int num, sum = 0;
+    char choice;
+
+start:
+    // Input number
+    printf("Enter a number: ");
+    scanf("%d", &num);
+    sum += num;
+
+    // Ask user if they want to continue
+    printf("Do you want to add another number? (y/n): ");
+    scanf(" %c", &choice);
+
+    // If yes, go back to input
+    if (choice == 'y' || choice == 'Y')
+        goto start;
+
+    // Final result
+    printf("Total sum: %d\n", sum);
+    return 0;
+}
+
+
+ 📘 Short Description
+This program uses the goto statement to jump back to a labeled section (start:) whenever the user decides to add another number.
+It keeps accumulating the total in a sum variable and exits only when the user inputs 'n' or 'N'.
+It's a simple example of manual flow control — retro, but still educational
+
+
+ 21. Write a sample program that demonstrate the use of Continue statement.
+
+
+ ##include <stdio.h>
+
+int main() {
+    int a = 5;
+
+    // Manually simulate skipping an operation
+    if (a % 2 == 0) {
+        // Simulated continue: skip this block
+    } else {
+        // Action you'd normally do after continue skips others
+        printf("The number %d is odd\n", a);
+    }
+
+    return 0;
+}
+
+
+📝 Short Description. 
+This C program uses an if-else structure to simulate the effect of skipping a condition, 
+similar to what continue does inside loops. If the number is even, the program does nothing. 
+If it's odd, it prints the result — demonstrating conditional flow without loop constructs.
